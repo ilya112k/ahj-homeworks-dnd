@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/cfja69pi1ct0r5tj?svg=true)](https://ci.appveyor.com/project/ilya112k/ahj-homeworks-dnd)
+[![Netology AHJ](https://github.com/ilya112k/ahj-homeworks-dnd/actions/workflows/web.yml/badge.svg)](https://github.com/ilya112k/ahj-homeworks-dnd/actions/workflows/web.yml)
 
 [Ссылка на Github Pages](https://ilya112k.github.io/ahj-homeworks-dnd/)
 
