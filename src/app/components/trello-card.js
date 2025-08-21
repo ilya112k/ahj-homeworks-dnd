@@ -33,7 +33,7 @@ export default class TrelloCard {
 
     this.trelloCard.append(this.trelloCardTitle, this.btnDel);
 
-    this.parentEl.appendChild(this.trelloCard);
+    this.parentEl.append(this.trelloCard);
 
     this.stateApp.addCard(this.columnTitle, {
       id: this.trelloCard.id,

@@ -47,10 +47,11 @@ export default class TrelloColumns {
         title,
       ).bindToDOMLoad();
 
-      this.trelloColumnContainer.appendChild(this.column);
+      this.column.append();
+      this.trelloColumnContainer.append(this.column);
     });
 
-    this.parentEl.appendChild(this.trelloColumnContainer);
+    this.parentEl.append(this.trelloColumnContainer);
 
     this.addEventsCards();
   }
@@ -110,6 +111,8 @@ export default class TrelloColumns {
         evt.target
           .closest(".column-content")
           .insertBefore(this.activeElement, nextElement);
+      } else {
+        evt.target?.closest(".column-content")?.append(this.activeElement);
       }
 
       if (

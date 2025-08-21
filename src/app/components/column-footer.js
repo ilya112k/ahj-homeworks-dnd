@@ -19,7 +19,7 @@ export default class ColumnFooter {
       text: "&#10010;" + `Add another card`,
       type: "button",
     }).element;
-    this.columnFooter.appendChild(this.columnFooterBtnForm);
+    this.columnFooter.append(this.columnFooterBtnForm);
 
     const trelloForm = new TrelloFormTextarea(
       this.columnFooter,
@@ -28,7 +28,7 @@ export default class ColumnFooter {
     );
     trelloForm.bindToDOM();
 
-    this.parentEl.appendChild(this.columnFooter);
+    this.parentEl.append(this.columnFooter);
     this.columnFooterBtnForm.addEventListener("click", this.openForm);
   }
 

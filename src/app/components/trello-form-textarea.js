@@ -36,7 +36,7 @@ export default class TrelloFormTextarea {
     this.containerBtns.append(this.btnAdd, this.btnReset);
     this.form.append(this.textarea, this.containerBtns);
 
-    this.parentEl.appendChild(this.form);
+    this.parentEl.append(this.form);
 
     this.btnReset.addEventListener("click", this.onClick);
     this.form.addEventListener("submit", this.onSubmit);
@@ -44,14 +44,17 @@ export default class TrelloFormTextarea {
 
   onSubmit(e) {
     e.preventDefault();
-    const trelloCard = new TrelloCard(
-      this.parentEl.previousSibling,
-      this.textarea.value,
-      this.stateApp,
-      this.columnTitle,
-    );
-    trelloCard.bindToDOM();
-    e.target.reset();
+    if (this.textarea.value.trim()) {
+      const trelloCard = new TrelloCard(
+        this.parentEl.previousSibling,
+        this.textarea.value,
+        this.stateApp,
+        this.columnTitle,
+      );
+      trelloCard.bindToDOM();
+      e.target.reset();
+      this.onClick(e);
+    }
   }
 
   onClick(e) {

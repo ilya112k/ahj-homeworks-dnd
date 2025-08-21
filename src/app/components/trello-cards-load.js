@@ -29,7 +29,7 @@ export default class TrelloCardsLoad {
         }).element;
 
         this.trelloCard.append(this.trelloCardTitle, this.btnDel);
-        this.parentEl.appendChild(this.trelloCard);
+        this.parentEl.append(this.trelloCard);
 
         this.btnDel.addEventListener("click", this.delCard);
       });
